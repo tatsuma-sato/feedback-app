@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Header = ({ text, bgColor, textColor }) => {
   const headerStyles = {
@@ -10,7 +11,17 @@ const Header = ({ text, bgColor, textColor }) => {
   return (
     <header style={headerStyles}>
       <div className="container">
-        <h2>{text}</h2>
+        <Link to="/">
+          <h2
+            style={{
+              color: "#ff6a95",
+              outline: "none",
+              textDecoration: "none",
+            }}
+          >
+            {text}
+          </h2>
+        </Link>
       </div>
     </header>
   );
